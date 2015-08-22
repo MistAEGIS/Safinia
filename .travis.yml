@@ -1,0 +1,13 @@
+language: node_js
+
+node_js:
+  - 0.10.31
+
+deploy:
+  provider: npm
+  email: atracaelus@gmail.com
+  api_key:
+    secure: DaaTwV1Bd/eUk/OBFIoS6zkmsQuHYb6D4d8WE0r9xBgTJi2L39U+fh4g/WgcD5Shx1MBxAIK/HEn9pH2AquWSI/425aaQ7YW93AOJvWzzuGHYXAVVaqVLNhjcjRTa1sMufOzl5Ahygad9NqQ5vVYlbzryegbg5enMcJSlpDYh2Z9AvMbfgSTMqgkpSIsfNihmFovXLsJZ7Hjh+zfJ4/IxyJrCLLFnQc/46x7MRbLX1UKj+OqwFV5its/CTGB2LStazkarBGURbfKVGK4+HJ0+SxOiFbfMmhVDWQk/9DC0oDRTIM1J+7jdE72Y32WooCFj3U3+UjgDFtZvHu5fBUsV9n++KgzgLwpFz3MScUXzQqhanTv5qjZQgXFyRQ7ii1YyY1RQF3AKXtiYSq0fsxj47sGf2n4rx87GNEY2Fzrd9OIIFFrHJQocCEpex/KpM7rZ4G7Pn2rvGnaesPzb1aguRvLT2VDg7AyMyvlX5VeYWEhxqD0y09f44SAqOKjdSEhxgkuONwFqk7YmyuqwrwpfCE3AUlBYhBbtOn32CAjYm17gt9d9OerU6+zwo9KBD2wMbF4PDVvYvZOtzkiq9OGCEWdidrlRjxy6qExD0vpq08K+5PBTAqiDLw0hQpHeq2JeS87RAqAxfRFkQoyW5YbVE8somkT4T6wbyAmezDBgX0=
+  on:
+    tags: true
+    branch: master
