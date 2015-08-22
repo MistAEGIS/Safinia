@@ -1,6 +1,8 @@
 module.exports =
 {
     connected: function (socket, io, data, callback) {
+        console.log('new socket connection');
+
         socket.user = socket.request.session.user;
 
         if (!socket.user) return;
@@ -10,6 +12,8 @@ module.exports =
     },
 
     disconnected: function (socket, io, data, callback) {
+        console.log('socket disconnected');
+
         if (!socket.user) return;
 
         socket.broadcast.emit('server.disconnect', { user: socket.user });

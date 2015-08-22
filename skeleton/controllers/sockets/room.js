@@ -1,5 +1,3 @@
-var sha1 = require('sha1');
-
 module.exports =
 {
     join: function (socket, io, data, callback) {
