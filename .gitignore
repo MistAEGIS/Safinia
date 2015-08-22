@@ -1,0 +1,8 @@
+uploads
+node_modules
+
+.tmp
+.settings
+.git
+
+npm-debug.log
