@@ -6,7 +6,7 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var mongoose = require('mongoose');
-var Safinia = require('../Safinia');
+var Safinia = require('Safinia');
 
 // local dependencies and variables
 var config = require('./config/settings');
