@@ -1,4 +1,4 @@
-# Safinia
+# Safinia [![Build Status](https://travis-ci.org/MistAEGIS/Safinia.svg?branch=master)](https://travis-ci.org/MistAEGIS/Safinia)
 [Safinia](https://glosbe.com/el/en/%CF%83%CE%B1%CF%86%CE%AE%CE%BD%CE%B5%CE%B9%CE%B1) provides you with middleware and skeleton to easily create and maintain realtime node.js webapplications.
 It utilizes express.js and socket.io. The project comes with router middleware for socket.io and express.js.
 
