@@ -17,18 +17,18 @@ var session = require('express-session')
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
-var Safinia = require('Safinia');
+var safinia = require('safinia');
 
 // direct incoming http requests to a web router config file
 var webRoutesConfig = require('./config/routes.web');
 var webControllerFolder = __dirname + '/controllers/web/';
-app.use(Safinia.web.router(webRoutesConfig, webControllerFolder, app));
+app.use(safinia.web.router(webRoutesConfig, webControllerFolder, app));
 
 // direct incoming websocket emits to a socket router config file
 var sessionMiddleware = session({ 'secret' : 'your-secret' });
 var socketRoutesConfig = require('./config/routes.sockets');
 var socketControllerFolder = __dirname + '/controllers/sockets/';
-io.use(Safinia.socket.router(socketRoutesConfig, socketControllerFolder, io, sessionMiddleware));
+io.use(safinia.socket.router(socketRoutesConfig, socketControllerFolder, io, sessionMiddleware));
 ```
 
 
