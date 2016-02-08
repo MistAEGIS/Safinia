@@ -67,7 +67,9 @@ module.exports =
 ```
 
 ## Controllers
-Within Safinia you are required to specify a folder where controllers are stored. The router then looks for the specified controller. The two types of controllers _(web and socket)_ makes use of two similiar structures.
+Within Safinia you are required to specify a folder where controllers are stored, for example `/controllers`
+The router then looks for the specified controller, so if you define `controller: 'default'` in your config file, Safinia expects there to be a `/controllers/default.js` file. 
+There are two types of controllers _(web and socket)_, which make use of two similiar structures.
 
 **Web controller**
 ```javascript
