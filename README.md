@@ -24,13 +24,18 @@ var webRoutesConfig = require('./config/routes.web');
 var webControllerFolder = __dirname + '/controllers/web/';
 app.use(safinia.web.router(webRoutesConfig, webControllerFolder, app));
 
-// direct incoming websocket emits to a socket router config file
+// [optional] direct incoming websocket emits to a socket router config file
 var sessionMiddleware = session({ 'secret' : 'your-secret' });
 var socketRoutesConfig = require('./config/routes.sockets');
 var socketControllerFolder = __dirname + '/controllers/sockets/';
 io.use(safinia.socket.router(socketRoutesConfig, socketControllerFolder, io, sessionMiddleware));
-```
 
+// finally boot up the server
+server.listen(3000, function () {
+    console.log('Server is listening at port 3000');
+});
+
+```
 
 ## Routers
 Below you can find the two types of router config files _(web and socket)_.
@@ -86,6 +91,8 @@ module.exports =
 ```
 
 **Socket controller**
+
+Note that the current session can be accessed through `socket.request.session`.
 ```javascript
 module.exports =
 {
